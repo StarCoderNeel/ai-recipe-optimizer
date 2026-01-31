@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-recipe-optimizer"
+version = "0.1.0"
+description = "An AI-powered recipe optimizer that suggests ingredient substitutions, adjusts cooking times, and provides nutritional insights based on user preferences and dietary restrictions."
+dependencies = ['streamlit', 'pandas', 'numpy', 'scikit-learn', 'matplotlib']
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+addopts = "-v --tb=short"
